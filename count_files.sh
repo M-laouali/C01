@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# Demander à l'utilisateur d'entrer le chemin du répertoire
+# Demander à l'utilisateur de saisir le répertoire
 echo "Entrez le chemin du répertoire :"
-read directory
+read repertoire
 
-# Vérifier si le répertoire existe
-if [ -d "$directory" ]; then
-    # Compter uniquement les fichiers (pas les dossiers)
-    count=$(ls -l "$directory" | grep -v '^d' | wc -l)
-    echo "Il y a $count fichiers dans le répertoire $directory."
+# Vérifie si le répertoire existe
+if [ -d "$repertoire" ]; then
+    # Compter uniquement les fichiers (exclut les dossiers)
+    nombre_fichiers=$(find "$repertoire" -maxdepth 1 -type f | wc -l)
+    echo "Il y a $nombre_fichiers fichiers dans le répertoire $repertoire."
 else
-    echo "Le répertoire n'existe pas."
+    echo "Erreur : le répertoire n'existe pas."
 fi
