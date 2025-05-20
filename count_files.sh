@@ -11,4 +11,4 @@ if [ -f "$myfolder/$file" ]; then
 count=$((count + 1))
    fi
 done
-echo "Le dossier $myfolder contient $count=$((count + 1)) fichiers"
+echo "Le dossier $myfolder contient $count=$((count + 1)) fichier(s)"
