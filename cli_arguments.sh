@@ -1,15 +1,17 @@
 #!/bin/bash
 
-# 
+# saisir 
 
-read -a arguments 
+read a arguments
 
-# Initialiser un compteur
-compteur=1
+# initialisation du compteur
 
-# Parcourir tous les arguments
-for arg in "$@"
-do
-    echo "Argument $compteur: $arg"
-    compteur=$((compteur + 1))
+i=1
+
+# parcours du tableau arguments avec la boucle for
+
+for arg in "${arguments[@]}"; do
+
+echo "Argument $((i++)): $arg"
+
 done
