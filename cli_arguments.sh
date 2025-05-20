@@ -1,10 +1,8 @@
 #!/bin/bash
 
-# Vérifie s'il y a au moins un argument
-if [ $# -eq 0 ]; then
-    echo "Aucun argument fourni."
-    exit 1
-fi
+# 
+
+read -a arguments 
 
 # Initialiser un compteur
 compteur=1
